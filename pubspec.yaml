@@ -1,0 +1,40 @@
+name: teleffony_app
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: '>=2.19.5 <3.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  get_storage: 2.1.1
+  image_picker: 0.8.7+1
+  uuid: 3.0.7
+  dotted_border: 2.0.0+3
+  contacts_service: 0.6.3
+  fluttercontactpicker: 4.7.0
+  flutter:
+    sdk: flutter
+  icons_launcher: ^2.1.0
+  flutter_native_splash: ^2.2.19
+
+dev_dependencies:
+  flutter_lints: 2.0.1
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+flutter_native_splash:
+  color: '#000000'
+  image: 'assets/teleffony.png'
+
+icons_launcher:
+  image_path: 'assets/teleffony.png'
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
