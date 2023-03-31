@@ -59,3 +59,11 @@ flutter run --hot
 ```
 
 # Screenshots
+
+![Home Page](https://user-images.githubusercontent.com/10288731/229138344-2f005ed2-7459-48c3-b68e-ed8fb7bac7e8.png | width=320)
+
+![Add Category Modal](https://user-images.githubusercontent.com/10288731/229138350-1fdd1b2b-770b-4af3-a820-23edfb9efd8c.png | width=320)
+
+![Category Details](https://user-images.githubusercontent.com/10288731/229138361-e410149a-d75f-4182-b585-67be6d95141f.png | width=320)
+
+![Delet Categories](https://user-images.githubusercontent.com/10288731/229138367-9297fb16-311b-4420-8ca1-0ca071046d16.png | width=320)
