@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:teleffony_app/app/models/contact_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactTile extends StatelessWidget {
   AppContact contact;
@@ -18,7 +20,24 @@ class ContactTile extends StatelessWidget {
         ),
         Text(contact.number!),
         TextButton(
-            onPressed: () {},
+            onPressed: () async {
+              Uri uri = Uri.parse('tel:${contact.number}');
+              if (await canLaunchUrl(uri)) {
+                await launchUrl(uri);
+              } else {
+                Get.dialog(AlertDialog(
+                  title: const Text('Unable to launch'),
+                  content: const Text('Sorry, unable to open specified link'),
+                  actions: [
+                    OutlinedButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        child: const Text('Close'))
+                  ],
+                ));
+              }
+            },
             style: TextButton.styleFrom(
               minimumSize: Size.zero,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
